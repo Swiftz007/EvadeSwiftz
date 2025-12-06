@@ -12,7 +12,7 @@ local buttonTexts = {
     ["FPS"] = {EN="FPS", TH="ลดกราฟิก"},
     ["Teleport Roof"] = {EN="Teleport Roof", TH="วาร์ปขึ้นหลังคา"},
     ["AFK Money"] = {EN="AFK Money", TH="ฟาร์มเงินอัตโนมัติ"},
-    ["Teleport Downed 1s"] = {EN="Teleport Downed 1s", TH="วาร์ปหาผู้เล่นที่ล้ม 1s"},
+    ["Teleport Downed 1s"] = {EN="Teleport Downed 1s", TH="วาร์ปหา1s"},
     ["Teleport Stationary"] = {EN="Teleport Stationary", TH="วาร์ปหาผู้เล่นนิ่ง"},
     ["Moon Mode"] = {EN="Moon Mode", TH="โหมดดวงจันทร์"},
     ["Song"] = {EN="Song", TH="เพลง"}
@@ -72,7 +72,7 @@ local kBtn = Instance.new("ImageButton")
 kBtn.Size = UDim2.new(0,60,0,60)
 kBtn.Position = UDim2.new(0,50,0,50)
 kBtn.BackgroundColor3 = Color3.fromRGB(0,0,0)
-kBtn.Image = "rbxassetid://15565178021"
+kBtn.Image = "rbxassetid://5009915812"
 kBtn.Active = true
 kBtn.Draggable = true
 local corner = Instance.new("UICorner")
@@ -85,7 +85,7 @@ local frame = Instance.new("ImageLabel")
 frame.Size = UDim2.new(0,320,0,600)
 frame.Position = UDim2.new(0,150,0,100)
 frame.BackgroundColor3 = Color3.fromRGB(25,25,25)
-frame.Image = "rbxassetid://15565178021"
+frame.Image = "rbxassetid://10590477450"
 frame.BackgroundTransparency = 0
 frame.Active = true
 frame.Visible = false
