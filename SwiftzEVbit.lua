@@ -9,13 +9,12 @@ local currentLanguage = "EN"
 local buttonTexts = {
     ["Auto Jump"] = {EN="Auto Jump", TH="กระโดดอัตโนมัติ"},
     ["Lag Switch"] = {EN="Lag Switch", TH="สวิตช์แลค"},
-    ["FPS"] = {EN="FPS", TH="ลดกราฟิก"},
-    ["Teleport Roof"] = {EN="Teleport Roof", TH="วาร์ปขึ้นหลังคา"},
-    ["AFK Money"] = {EN="AFK Money", TH="ฟาร์มเงินอัตโนมัติ"},
-    ["Teleport Downed 1s"] = {EN="Teleport Downed 1s", TH="วาร์ปหา1s"},
+    ["FPS"] = {EN="Performance mode", TH="โหมดประสิทธิภาพ"},
+    ["Teleport Roof"] = {EN="Teleport upstairs", TH="วาร์ปขึ้นข้างบน"},
+    ["AFK Money"] = {EN="AFK Money", TH="ฟาร์มเงิน"},
+    ["Teleport Downed 1s"] = {EN="Teleport1s", TH="วาร์ปหา1s"},
     ["Teleport Stationary"] = {EN="Teleport Stationary", TH="วาร์ปหาผู้เล่นนิ่ง"},
     ["Moon Mode"] = {EN="Moon Mode", TH="โหมดดวงจันทร์"},
-    ["Song"] = {EN="Song", TH="เพลง"}
 }
 
 -- GUI เลือกภาษา
@@ -34,8 +33,8 @@ local text = Instance.new("TextLabel")
 text.Size = UDim2.new(0,400,0,80)
 text.Position = UDim2.new(0.5,-200,0.3,0)
 text.BackgroundTransparency = 1
-text.Text = "Select Your Language"
-text.TextColor3 = Color3.fromRGB(255,255,255)
+text.Text = "Select Language"
+text.TextColor3 = Color3.fromRGB(255,50,255)
 text.Font = Enum.Font.SourceSansBold
 text.TextScaled = true
 text.Parent = bg
@@ -44,7 +43,7 @@ local thaiBtn = Instance.new("TextButton")
 thaiBtn.Size = UDim2.new(0,120,0,60)
 thaiBtn.Position = UDim2.new(0.5,-130,0.5,0)
 thaiBtn.Text = "ไทย"
-thaiBtn.BackgroundColor3 = Color3.fromRGB(255,50,50)
+thaiBtn.BackgroundColor3 = Color3.fromRGB(50,255,50)
 thaiBtn.TextColor3 = Color3.new(1,1,1)
 thaiBtn.Font = Enum.Font.SourceSansBold
 thaiBtn.TextScaled = true
@@ -54,7 +53,7 @@ local engBtn = Instance.new("TextButton")
 engBtn.Size = UDim2.new(0,120,0,60)
 engBtn.Position = UDim2.new(0.5,10,0.5,0)
 engBtn.Text = "English"
-engBtn.BackgroundColor3 = Color3.fromRGB(50,50,255)
+engBtn.BackgroundColor3 = Color3.fromRGB(30,50,30)
 engBtn.TextColor3 = Color3.new(1,1,1)
 engBtn.Font = Enum.Font.SourceSansBold
 engBtn.TextScaled = true
@@ -119,7 +118,7 @@ title.BackgroundColor3 = Color3.fromRGB(40,40,40)
 title.TextColor3 = Color3.fromRGB(255,255,255)
 title.Font = Enum.Font.SourceSansBold
 title.TextSize = 20
-title.Text = "Swiftz Hub"
+title.Text = "Swiftz Hub [ Crack version ]"
 title.LayoutOrder = 0
 title.Parent = scroll
 
@@ -151,9 +150,9 @@ local function addBtn(name, callback)
     local pullBtn = Instance.new("TextButton")
     pullBtn.Size = UDim2.new(0,20,0,20)
     pullBtn.Position = UDim2.new(1,-25,0,5)
-    pullBtn.Text = "+"
+    pullBtn.Text = "⚡"
     pullBtn.Font = Enum.Font.SourceSansBold
-    pullBtn.TextSize = 15
+    pullBtn.TextSize = 17
     pullBtn.TextColor3 = Color3.fromRGB(255,255,255)
     pullBtn.BackgroundColor3 = Color3.fromRGB(0,100,200)
     pullBtn.Parent = btn
@@ -201,7 +200,7 @@ local function toggleAutoJump() autoJump = not autoJump end
 
 local function lagSwitch()
     local start = tick()
-    while tick()-start<2 do for i=1,1e7 do local a=math.random() end end
+    while tick()-start<0.1 do for i=0.3,1e7 do local a=math.random() end end
 end
 
 local clayMode=false
