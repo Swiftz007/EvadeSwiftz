@@ -1,4 +1,4 @@
---SWIFTZ LOADING SCREEN
+---------------- SWIFTZ LOADING SCREEN -----------------
 local CoreGui = game:GetService("CoreGui")
 
 --ลบ Loading เดิมถ้ามี
@@ -6,7 +6,9 @@ if CoreGui:FindFirstChild("SwiftzLoadingUI") then
 	CoreGui.SwiftzLoadingUI:Destroy()
 end
 
+--------------------------------------------------------
 -- UI MAIN
+--------------------------------------------------------
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "SwiftzLoadingUI"
 ScreenGui.Parent = CoreGui
@@ -17,7 +19,9 @@ MainBlack.Size = UDim2.new(1,0,1,0)
 MainBlack.BackgroundColor3 = Color3.fromRGB(0,0,0)
 MainBlack.BackgroundTransparency = 0
 
+--------------------------------------------------------
 -- TITLE MAIN
+--------------------------------------------------------
 local Title = Instance.new("TextLabel", MainBlack)
 Title.AnchorPoint = Vector2.new(0.5, 0.5)
 Title.Position = UDim2.new(0.5,0,0.38,0)
@@ -28,8 +32,9 @@ Title.Font = Enum.Font.GothamBold
 Title.TextSize = 48
 Title.BackgroundTransparency = 1
 
-
--- Background Full
+--------------------------------------------------------
+-- PROGRESS BAR (ขนาดกลางเต็มกำลัง)
+--------------------------------------------------------
 local BarBack = Instance.new("Frame", MainBlack)
 BarBack.BackgroundColor3 = Color3.fromRGB(45,45,45)
 BarBack.Position = UDim2.new(0.5,0,0.48,0)
@@ -58,7 +63,9 @@ PercentageText.Font = Enum.Font.Gotham
 PercentageText.Text = "0%"
 PercentageText.TextSize = 24
 
+--------------------------------------------------------
 -- FOOTER TEXT CYCLING
+--------------------------------------------------------
 local Footer = Instance.new("TextLabel", MainBlack)
 Footer.AnchorPoint = Vector2.new(0.5, 0.5)
 Footer.Position = UDim2.new(0.5,0,0.61,0)
@@ -74,8 +81,6 @@ local footerMessages = {
 	"https://discord.gg/U6Kgwwa9f",
 	"Welcome to Swiftz Hub",
 	"Love Swiftz Hub"
-  "Swiftz Hub No.1"
-  "dev is x2Sxqz_"
 }
 
 --------------------------------------------------------
@@ -100,7 +105,9 @@ spawn(function()
 	end
 end)
 
+--------------------------------------------------------
 -- PROGRESSING FUNCTION
+--------------------------------------------------------
 local totalTime = 90 -- 90 seconds → 1.30 minute
 local steps = 100
 local interval = totalTime/steps
@@ -111,7 +118,9 @@ for i = 1,steps do
 	wait(interval)
 end
 
+--------------------------------------------------------
 -- FADE OUT ALL UI
+--------------------------------------------------------
 for t=1,20 do
 	MainBlack.BackgroundTransparency = (t/20)
 	Title.TextTransparency = (t/20)
@@ -123,5 +132,8 @@ end
 
 ScreenGui:Destroy()
 
+--------------------------------------------------------
 -- LOAD MAIN SCRIPT
+--------------------------------------------------------
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Swiftz007/EvadeSwiftz/refs/heads/main/SwiftzEVbit.lua"))()
+--------------------------------------------------------
