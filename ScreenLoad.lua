@@ -108,7 +108,7 @@ end)
 --------------------------------------------------------
 -- PROGRESSING FUNCTION
 --------------------------------------------------------
-local totalTime = 90 -- 90 seconds → 1.30 minute
+local totalTime = 75 -- 90 seconds → 1.30 minute
 local steps = 100
 local interval = totalTime/steps
 
